@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Saksham Sinha — Software Engineer focused on backend, full-stack and systems engineering." />
+  <title>Saksham Sinha — Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="nav-name" href="#home" aria-label="Saksham Sinha home">SS</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="assets/Saksham-Sinha-Resume.pdf" id="resume-nav-link" target="_blank" rel="noopener">Resume ↗</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-grid-mark" aria-hidden="true"></div>
+    <div class="hero-orbit orbit-1" aria-hidden="true"></div>
+    <div class="hero-orbit orbit-2" aria-hidden="true"></div>
+    <div class="hero-content reveal">
+      <div class="hero-role" aria-live="polite"><span class="terminal-dot"></span><span class="prompt">&gt;</span><span id="typed-role"></span><span class="cursor" aria-hidden="true">_</span></div>
+      <h1 class="hero-name"><span>Saksham</span><span>Sinha</span></h1>
+      <div class="hero-line"><span></span></div>
+      <p class="hero-bio">
+        B.Tech ECE @ SRM · CGPA 9.56 · Building backend systems,
+        real-time platforms, and AI-powered tools.
+      </p>
+      <div class="hero-meta">
+        <span><i></i>Chennai, IN</span>
+        <span><i></i>Open to internships</span>
+        <span><i></i>2027</span>
+      </div>
+      <div class="hero-links">
+        <a href="https://github.com/sakshamsinha707" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/saksham-sinha-91b4562a8" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn ↗</a>
+        <a href="#contact" class="btn btn-solid">Get in touch</a>
+      </div>
+    </div>
+
+    <div class="hero-stat-block reveal reveal-delay-2">
+      <span class="stat-index">01 / PROFILE</span>
+      <div class="stat"><span class="stat-num">9.56</span><span class="stat-label">CGPA</span></div>
+      <div class="stat"><span class="stat-num">#1,384</span><span class="stat-label">LeetCode best test rank</span></div>
+      <div class="stat-footer"><span></span><small>SRM · ECE · 2027</small></div>
+    </div>
+  </section>
+
+  <section class="section reveal-section" id="experience">
+    <h2 class="section-title">Experience</h2>
+    <div class="exp-card reveal">
+      <div class="exp-meta">
+        <span class="exp-period">Jun – Aug 2026</span>
+        <span class="exp-tag">Remote / Hybrid</span>
+      </div>
+      <div class="exp-body">
+        <div class="exp-heading-row">
+          <div>
+            <h3 class="exp-role">Backend Developer Intern</h3>
+            <p class="exp-company">Little Story Live-Gen Studio Pvt. Ltd.</p>
+          </div>
+          <span class="exp-index">01</span>
+        </div>
+        <ul class="exp-points">
+          <li>Developed RESTful APIs (FastAPI, PostgreSQL) for a live-gen AI media platform, building endpoints for media asset uploads, metadata storage, and end-to-end publishing workflows.</li>
+          <li>Implemented secure JWT authentication and Role-Based Access Control (Admin / Creator / User), ensuring appropriate data isolation across stakeholder tiers.</li>
+          <li>Integrated asynchronous Redis task queues for heavy AI media generation, reducing average API latency by 25%; containerized backend services with Docker.</li>
+        </ul>
+        <div class="exp-stack">
+          <span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span><span>JWT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal-section" id="work">
+    <h2 class="section-title">Selected Work</h2>
+    <div class="projects-grid">
+      <article class="project-card reveal">
+        <span class="project-number">01</span>
+        <div class="project-header">
+          <h3>Real-Time SFU Diagnostics Platform</h3>
+          <a href="https://github.com/sakshamsinha707/Real-Time-SFU-Diagnostics-Platform" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Open Real-Time SFU Diagnostics Platform repository">↗</a>
+        </div>
+        <p class="project-desc">
+          Built a remote field-diagnostics platform routing WebRTC media through a custom Mediasoup SFU — cutting client bandwidth 60% vs. P2P mesh across 50+ concurrent sessions, with live FPS / latency / jitter telemetry per session.
+        </p>
+        <div class="project-stack">
+          <span>Node.js</span><span>Express</span><span>Mediasoup</span><span>Socket.io</span><span>Next.js</span><span>Docker</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal reveal-delay-1">
+        <span class="project-number">02</span>
+        <div class="project-header">
+          <h3>Distributed Job Scheduler</h3>
+          <a href="https://github.com/sakshamsinha707/Distributed-Job-Scheduler" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Open Distributed Job Scheduler repository">↗</a>
+        </div>
+        <p class="project-desc">
+          Built a distributed job scheduler with a Go worker pool and FastAPI control plane; used PostgreSQL <code>FOR UPDATE SKIP LOCKED</code> for contention-free job dispatch, with retry/backoff, dead-letter queues, and stale-worker recovery.
+        </p>
+        <div class="project-stack">
+          <span>Go</span><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal reveal-delay-2">
+        <span class="project-number">03</span>
+        <div class="project-header">
+          <h3>Satya — Hybrid Fake News Detector</h3>
+          <a href="https://github.com/sakshamsinha707/satya" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Open Satya repository">↗</a>
+        </div>
+        <p class="project-desc">
+          Achieved 94% validation accuracy using a hybrid NLP pipeline combining TF-IDF, Logistic Regression, and MLP Neural Networks. Deployed an asynchronous FastAPI backend and TypeScript frontend with Gemini API integration for real-time explainable inference.
+        </p>
+        <div class="project-stack">
+          <span>Python</span><span>FastAPI</span><span>TypeScript</span><span>Gemini API</span><span>TF-IDF</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal reveal-delay-3">
+        <span class="project-number">04</span>
+        <div class="project-header">
+          <h3>Plant Disease Severity Segmentation</h3>
+          <a href="https://github.com/sakshamsinha707/nnunet-plant-disease-segmentation" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Open Plant Disease Segmentation repository">↗</a>
+        </div>
+        <p class="project-desc">
+          Engineered an nnU-Net v2 semantic segmentation pipeline with channel-wise normalization, achieving 79.38% pixel accuracy across 11,458 image-mask pairs. Benchmarked nnU-Net against SegFormer MIT-B0 and ResNet18 across Dice, IoU, Precision, and Recall.
+        </p>
+        <div class="project-stack">
+          <span>Python</span><span>PyTorch</span><span>nnU-Net v2</span><span>SegFormer</span><span>PlantSeg</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section reveal-section" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group reveal reveal-delay-1">
+        <h4>Languages</h4>
+        <div class="skill-tags"><span>C++</span><span>Go</span><span>Python</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span></div>
+      </div>
+      <div class="skill-group reveal reveal-delay-2">
+        <h4>Frontend</h4>
+        <div class="skill-tags"><span>React.js</span><span>Next.js</span><span>HTML</span><span>CSS</span><span>Tailwind CSS</span></div>
+      </div>
+      <div class="skill-group reveal reveal-delay-3">
+        <h4>Backend</h4>
+        <div class="skill-tags"><span>FastAPI</span><span>Node.js</span><span>Express.js</span><span>REST APIs</span><span>WebSockets</span><span>Socket.io</span><span>Redis</span><span>PostgreSQL</span></div>
+      </div>
+      <div class="skill-group reveal reveal-delay-0">
+        <h4>Systems</h4>
+        <div class="skill-tags"><span>Goroutines</span><span>POSIX threads</span><span>Distributed coordination</span><span>Row-level locking</span></div>
+      </div>
+      <div class="skill-group reveal reveal-delay-1">
+        <h4>Tools</h4>
+        <div class="skill-tags"><span>Docker</span><span>Git</span><span>GitHub</span><span>Linux</span><span>Postman</span><span>Mediasoup</span><span>WebRTC</span></div>
+      </div>
+      <div class="skill-group reveal reveal-delay-2">
+        <h4>Core CS</h4>
+        <div class="skill-tags"><span>Data Structures &amp; Algorithms</span><span>OOP</span><span>Operating Systems</span><span>DBMS</span><span>Computer Networks</span></div>
+      </div>
+    </div>
+    <div class="achievement-strip reveal">
+      <span class="achievement-label">Achievements</span>
+      <span>Flipkart GRID 8.0 — Cleared 2 of 4 rounds</span>
+      <span>LeetCode — Global Rank #1,384</span>
+    </div>
+  </section>
+
+  <section class="section reveal-section" id="contact">
+    <h2 class="section-title">Get in touch</h2>
+    <div class="contact-wrap reveal">
+      <div class="contact-info">
+        <span class="contact-kicker">OPEN TO OPPORTUNITIES</span>
+        <p>Open to software engineering internships, backend work, hackathon collaborations, and interesting engineering problems.</p>
+        <a href="mailto:sakshamsinha.ss7070@gmail.com" class="contact-email">sakshamsinha.ss7070@gmail.com</a>
+      </div>
+      <form class="contact-form" id="contact-form" action="/api/contact" method="POST">
+        <div class="form-row">
+          <input type="text" name="name" id="name" placeholder="Name" required />
+          <input type="email" name="email" id="email" placeholder="Email" required />
+        </div>
+        <textarea name="message" id="message" rows="4" placeholder="What's on your mind?" required></textarea>
+        <button type="submit" class="btn btn-solid" id="form-submit">
+          <span>Send message ↗</span>
+        </button>
+        <p class="form-status" id="form-status"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>Saksham Sinha · 2026</span>
+    <span><a href="mailto:sakshamsinha.ss7070@gmail.com">sakshamsinha.ss7070@gmail.com</a></span>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
